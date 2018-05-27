@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" language="JavaScript" src="/public/js/scripts.js"></script>
+    <script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.js"></script>
+    <script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.min.js"></script>
+    <title>预定场馆</title>
+</head>
+<body>
+    <label id="court_type_label" class="court_label">场地类型</label>
+    <select id="court_type" class="court_op" style="width: 150px">
+        <option value="乒乓球场" class="court_ops">乒乓球场</option>
+        <option value="网球场" class="court_ops">网球场</option>
+        <option value="羽毛球场" class="court_ops">羽毛球场</option>
+        <option value="攀岩馆" class="court_ops">攀岩馆</option>
+        <option value="室内篮球场" class="court_ops">室内篮球场</option>
+    </select>
+    <label class="court_label" style="margin-left: 50px;: ;">场地序号</label>
+    <input id="court_num" type="text" placeholder="请输入场地序号" style="width: 150px">
+    <br>
+    <label id="court_date_label" class="court_label" >场地日期</label>
+    <input id="court_date" type="date" style="width: 150px">
+    <label class="court_label" style="margin-left: 50px">场地时间</label>
+    <select id="court_time" class="court_op" style="width: 150px">
+        <option value="8:00-9:00" class="court_ops">8:00-9:00</option>
+        <option value="9:00-10:00" class="court_ops">9:00-10:00</option>
+        <option value="10:00-11:00" class="court_ops">10:00-11:00</option>
+        <option value="11:00-12:00" class="court_ops">11:00-12:00</option>
+        <option value="14:00-15:00" class="court_ops">14:00-15:00</option>
+        <option value="15:00-16:00" class="court_ops">15:00-16:00</option>
+        <option value="16:00-17:00" class="court_ops">16:00-17:00</option>
+        <option value="17:00-18:00" class="court_ops">17:00-18:00</option>
+    </select>
+    <br>
+    <label>预定金额</label>
+    <input id="book_price" type="text" placeholder="请输入预定金额" style="width: 150px">
+    <input type="button" class="btn-warning" value="book" style="margin-left: 50px;width: 80px" onclick="book_court()">
+</body>
+</html>

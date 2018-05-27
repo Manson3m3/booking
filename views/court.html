@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+
+    <!--<link href="/public/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="/public/css/public_style.css" rel="stylesheet">
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" language="JavaScript" src="/public/js/scripts.js"></script>
+    <script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.js"></script>
+    <script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.min.js"></script>
+</head>
+<body onload="search_court()">
+
+<div id="viewlayer" class="viewlayer">
+    <div id="menu_box" class="menu_box">
+        <!--<img src="/public/assets/images/title.png" class="title_img" />-->
+
+        <!--<form>-->
+        <!--<input type="text" class="search_input">-->
+        <!--<input type="button" name="Song" class="search_button" value="search" onclick="search(this)">-->
+        <!--</form>-->
+        <label id="court_type_label" class="court_label">场地类型</label>
+        <select id="court_type" class="court_op">
+            <option value="乒乓球场" class="court_ops">乒乓球场</option>
+            <option value="网球场" class="court_ops">网球场</option>
+            <option value="羽毛球场" class="court_ops">羽毛球场</option>
+            <option value="攀岩馆" class="court_ops">攀岩馆</option>
+            <option value="室内篮球场" class="court_ops">室内篮球场</option>
+        </select>
+        <label id="court_date_label" class="court_label" style="margin-left: 150px">场地日期</label>
+        <input id="court_date" type="date" >
+        <button class="search_court btn-info" onclick="search_court()">search</button>
+        <button id="book_court" class="btn btn-success" onclick="to_book()" style="margin-left: 250px;">预定场馆</button>
+        <button class="logout" onclick="logout()">LOGOUT</button>
+        <button class="self" onclick="self()"><%= user %></button>
+    </div><!--menu box-->
+    <div class="content">
+        <table id="court_info" class="table">
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>-->
+                    <!--场馆日期-->
+                <!--</th>-->
+                <!--<th>-->
+                    <!--场地名-->
+                <!--</th>-->
+                <!--<th>-->
+                    <!--时间段-->
+                <!--</th>-->
+                <!--<th>-->
+                    <!--当前平均预定费用-->
+                <!--</th>-->
+                <!--<th>-->
+                    <!--当前预订人数-->
+                <!--</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<% for(var i = 0; i< court_data.length ;i++){ %>-->
+            <!--<% if(i%5 == 0){ %>-->
+                <!--<tr>-->
+            <!--<% } %>-->
+            <!--<% if(i%5 == 1){ %>-->
+            <!--<tr class="table-active"><% } %>-->
+                <!--<% if(i%5 == 2){ %>-->
+            <!--<tr class="table-success"><% } %>-->
+                <!--<% if(i%5 == 3){ %>-->
+            <!--<tr class="table-warning"><% } %>-->
+                <!--<% if(i%5 == 4){ %>-->
+            <!--<tr class="table-danger"><% } %>-->
+                <!--<td >-->
+                    <!--<%= court_data[i][0] %>-->
+                <!--</td>-->
+                <!--<td >-->
+                    <!--<%= court_data[i][1] %>-->
+                <!--</td>-->
+                <!--<td >-->
+                    <!--<%= court_data[i][2] %>-->
+                <!--</td>-->
+                <!--<td >-->
+                    <!--<%= court_data[i][3] %>-->
+                <!--</td>-->
+                <!--<td >-->
+                    <!--<%= court_data[i][4] %>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<% } %>-->
+            <!--</tbody>-->
+        </table>
+    </div>
+    <div class="footer">
+        <a style="float: right;text-align: right;margin-right: 650px;margin-top: 20px">By Manson</a>
+    </div>
+</div><!--viewlayer-->
+
+</body>
+
+</html>

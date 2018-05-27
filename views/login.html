@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel='stylesheet' href="/public/css/public_style.css" />
+	<script type="text/javascript" language="JavaScript" src="/public/js/scripts.js"></script>
+	<script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.js"></script>
+	<script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.min.js"></script>
+	<!--<script type="text/javascript" language="javascript" src="/public/js/public_javascript.js"></script>-->
+</head>
+<body>
+<div id="viewlayer" class="viewlayer">
+	<div id="menu_box" class="menu_box">
+		<label class="welcome"><%= title %></label>
+		<!--<form>-->
+		<!--<input type="text" class="search_input">-->
+		<!--<input type="button" name="Song" class="search_button" value="search" onclick="search(this)">-->
+		<!--</form>-->
+		<button class="logout" onclick="to_register()">REGISTER</button>
+		<button class="self" onclick="to_court()">查看场地</button>
+	</div><!--menu box-->
+	<div class="content">
+		<div class="login_box box-shadow">
+			<div style="margin-top:0px; margin-left:0px; height:40px; width:100%; background-color:#333; font-size:35px; color:#fff; border-radius:5px 5px 0 0;">&nbsp;LOGIN</div>
+			<form id="loginForm">
+				<label id="email_label" class="account_label">账号</label>
+				<input id="email" type="email" class="email" placeholder=" 请输入同济邮箱">
+				<label id="password_label" class="account_label">密码</label>
+				<input id="password" type="password" class="password" placeholder=" 请输入密码">
+				<input type="button" class="login blue_button" value="login" onclick="login_submit()">
+				<input type="button" class="register white_button" value="register" onclick="to_register()">
+			</form>
+			<input type="text" class="waring" id="waring" readonly>
+		</div>
+	</div>
+	<div class="footer">
+		 <a style="float: right;text-align: right;margin-right: 650px;margin-top: 20px">By Manson</a>
+	</div>
+</div><!--viewlayer-->
+</body>
+</html>  

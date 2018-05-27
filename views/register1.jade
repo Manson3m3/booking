@@ -1,0 +1,21 @@
+//
+   Created by Administrator on 2018/5/13.
+extends layout
+h1 欢迎来到校园体育场馆预定系统
+    div(id="viewlayer" class="viewlayer")
+        div(id="menu_box" class="menu_box")
+            img(src="/css/images/title.png" class="title_img")
+            form
+                input(type="text" class="search_input")
+                input(type="button" name="court" class="search_court" value="search" onclick="search(this)")
+            button(class="logout" onclick="logout()") 登出
+            button(class="self" onclick="self()") 个人中心
+        div(class="content")
+            div(class="login_box box_shadow")
+                div(class="reg_login_text") 注册
+                    form(id="loginForm")
+                        input(id="email" type="text" class="email" placeholder="请输入同济邮箱")
+                        input(id="password" type="password" class="password" placeholder="请输入密码")
+                        input(type="button" class="register blue_button" value="register" onclick="registerSubmit()")
+                        input(type="button" class="register white_button" value="register" onclick="toRegister()")
+

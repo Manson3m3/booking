@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel='stylesheet' href="/public/css/public_style.css" />
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.js"></script>
+    <script type="text/javascript" language="javascript" src="/public/js/jquery1_3_2.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/public/js/scripts.js"></script>
+
+</head>
+<body onload="book_record()">
+<div id="viewlayer" class="viewlayer">
+    <div id="menu_box" class="menu_box">
+        <!--<img src="/public/assets/images/title.png" class="title_img" />-->
+        <label class="welcome"><%=title%></label>
+        <!--<form>-->
+        <!--<input type="text" class="search_input">-->
+        <!--<input type="button" name="Song" class="search_button" value="search" onclick="search(this)">-->
+        <!--</form>-->
+        <label id="account" style="color: white;margin-left: 200px;margin-top: 13px">账户余额：</label>
+        <a style="color: white"><%= account %></a>
+        <button class="btn-success" onclick="recharge()">充值</button>
+        <button class="logout" onclick="logout()">登出</button>
+        <button class="self" onclick="to_court()">查看场地</button>
+    </div><!--menu box-->
+    <div class="content">
+        <div class="tabbable" id="tabs-319574">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <button id="btn_court_record" class="nav-link btn-success" onclick="book_record()" data-toggle="tab">场馆预定记录</button>
+                </li>
+                <li class="nav-item">
+                    <button id="btn_sys" class="nav-link btn-success " style="margin-left: 20px;background: #2e3435" onclick="system_record()" data-toggle="tab">系统通知</button>
+                </li>
+            </ul>
+        </div>
+        <div id="record">
+            <table id="table_record" class="table" onload="book_record()" >
+                <!--<thead class="thead">-->
+                    <!--<tr>-->
+                        <!--<th>场地日期</th>-->
+                        <!--<th>场地时间</th>-->
+                        <!--<th>场地名称</th>-->
+                        <!--<th>预定费用</th>-->
+                        <!--<th>预定状态</th>-->
+                        <!--<th></th>-->
+                    <!--</tr>-->
+                <!--</thead>-->
+                <!--<tbody>-->
+                <!--<% for(var i = 0; i< data.length ;i++){ %>-->
+                <!--<% if(i%5 == 0){ %>-->
+                    <!--<tr>-->
+                    <!--<% } %>-->
+                    <!--<% if(i%5 == 1){ %>-->
+                <!--<tr class="table-active"><% } %>-->
+                    <!--<% if(i%5 == 2){ %>-->
+                <!--<tr class="table-success"><% } %>-->
+                    <!--<% if(i%5 == 3){ %>-->
+                <!--<tr class="table-warning"><% } %>-->
+                    <!--<% if(i%5 == 4){ %>-->
+                <!--<tr class="table-danger"><% } %>-->
+                    <!--<td >-->
+                        <!--<%= data[i]['court_date'] %>-->
+                    <!--</td>-->
+                    <!--<td >-->
+                        <!--<%= data[i]['court_time'] %>-->
+                    <!--</td>-->
+                    <!--<td >-->
+                        <!--<%= data[i]['court_name'] %>-->
+                    <!--</td>-->
+                    <!--<td >-->
+                        <!--<%= data[i]['book_price'] %>-->
+                    <!--</td>-->
+                    <!--<td >-->
+                        <!--<%= data[i]['book_state'] %>-->
+                    <!--</td>-->
+                    <!--<% if (data[i]['book_state'] == 1) {%>-->
+                    <!--<td>-->
+                        <!--<button class="btn-danger">取消预订</button>-->
+                    <!--</td>-->
+                    <!--<% } %>-->
+                <!--</tr>-->
+                <!--<% } %>-->
+                <!--</tbody>-->
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <a style="float: right;text-align: right;margin-right: 650px;margin-top: 20px">By Manson</a>
+    </div>
+</div><!--viewlayer-->
+</body>
+</html>
